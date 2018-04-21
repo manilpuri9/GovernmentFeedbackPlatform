@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+#overlayx {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#textx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+
+<div id="overlayx">
+  <div id="textx">Overlay Text
+    <button href="#" onclick="off()" class="pull-right">X</button>
+    <div class="container">
+        <h2>Form control: textarea</h2>
+        <p>The form below contains a textarea for comments:</p>
+        <form>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+        </form>
+        <button type="button" class="btn btn-success pull-right">Success</button>
+      </div>
+  </div>
+</div>
+
+<div style="padding:20px">
+  <h2>Overlay with Text</h2>
+  <button onclick="on()">Comment</button>
+  
+</div>
+
+<script>
+function on() {
+    document.getElementById("overlayx").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlayx").style.display = "none";
+}
+</script>
+
+     
+</body>
+</html>
+ <!--sdf-->
+ <div id="overlayx"class="">
+        <div id="textx">
+          <button href="#" onclick="off()" class="pull-right">X</button>
+          <div class="container">
+              <h2>COMMENTS</h2>
+              <form>
+                <div class="form-group" id="hell">
+                  <label for="comment">Comment:</label>
+                  <textarea class="input-block-level" rows="5" id="comment"style="background-color: black;color:#fff;"></textarea>
+                </div>
+              </form>
+              <button type="button" class="btn btn-success pull-right" onclick="appendx()">Success</button>
+            </div>
+        </div>
+      </div>
+      
+      <div style="padding:20px">
+        
+        <button onclick="on()">Comment</button>
+        
+      </div>
+      
+      <script>
+          function appendx(){
+              
+                  var com= document.getElementById("comment").value;
+                  var node = document.createTextNode(com);
+                  var con =document.getElementById("textx");
+                  con.appendChild(node);
+                  document.getElementById("comment").value =" ";
+          }
+      function on() {
+          document.getElementById("overlayx").style.display = "block";
+      }
+      
+      function off() {
+          document.getElementById("overlayx").style.display = "none";
+      }
+      </script>
+  <!--sdf-->

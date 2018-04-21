@@ -1,0 +1,259 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style type="text/css" media="screen">
+        
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+        .title-fonts{
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .title-dimention{
+            height: 40%;
+            width:30%;
+            background-color: rgb(26, 7, 7);
+            border: #0b1606;
+            margin:15px;
+        }
+        @media screen and (max-width: 300px) {
+          .title-dimention{
+              height: 40%;
+              width: 200px;
+              background-color: rgb(26, 7, 7);
+              border: #0b1606;
+              margin:15px;
+          }
+        }
+
+        @media screen and (max-width: 990px) {
+          .title-dimention{
+              height: 40%;
+              width: 50%;
+              background-color: rgb(26, 7, 7);
+              border: #0b1606;
+              margin:auto;
+              align-self: center;
+              margin-bottom: 10px;
+          }
+        }
+        .bgs{
+            background: -webkit-linear-gradient(45deg, #56ab2f, #a8e063);
+            background: -o-linear-gradient(45deg, #56ab2f, #a8e063);
+            background: -moz-linear-gradient(45deg, #56ab2f, #a8e063);
+            background: linear-gradient(45deg, #56ab2f, #a8e063)";
+        }
+        .pad{
+            padding-top:  30px;
+        }
+        
+    </style>
+</head>
+
+    <!DOCTYPE html>
+<html lang="en">
+  <body class="bg-contact3" style="background-image: url('static/images/bg-01.jpg');background-repeat: no-repeat;
+    background-attachment: fixed;">
+
+    <!-- Main Page Content -->
+    <div class="container bgs">
+      <div class="navbar navbar-inverse navbar-fixed-top bgs" role="navigation">
+        <div class="container"style="text-align: center;">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pad">
+      
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Road issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Transportation</p>
+    <span class="pull-left"id="urgency">level 3</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+    <!--sdf-->
+ <div id="overlayx"class="">
+        <div id="textx">
+          <button href="#" onclick="off()" class="pull-right">X</button>
+          <div class="container">
+              <h2>COMMENTS</h2>
+              <form>
+                <div class="form-group" id="hell">
+                  <label for="comment">Comment:</label>
+                  <textarea class="input-block-level" rows="5" id="comment"style="background-color: black;color:#fff;"></textarea>
+                </div>
+              </form>
+              <button type="button" class="btn btn-success pull-right" onclick="appendx()">Success</button>
+            </div>
+        </div>
+      </div>
+      
+      <div style="padding:20px">
+        
+        <button onclick="on()">Comment</button>
+        
+      </div>
+      
+      <script>
+          function appendx(){
+              
+                  var com= document.getElementById("comment").value;
+                  var node = document.createTextNode(com);
+                  var con =document.getElementById("textx");
+                  con.appendChild(node);
+                  document.getElementById("comment").value =" ";
+          }
+      function on() {
+          document.getElementById("overlayx").style.display = "block";
+      }
+      
+      function off() {
+          document.getElementById("overlayx").style.display = "none";
+      }
+      </script>
+  <!--sdf-->
+
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Road issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Transportation</p>
+    <span class="pull-left"id="urgency">level 3</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Health issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Health</p>
+    <span class="pull-left"id="urgency">level 1</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Health issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Health</p>
+    <span class="pull-left"id="urgency">level 1</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Education issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.</p>
+    <p id ="catagory pull-right">Education</p>
+    <span class="pull-left"id="urgency">level 2</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Education issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.</p>
+    <p id ="catagory pull-right">Education</p>
+    <span class="pull-left"id="urgency">level 2</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Drinking water</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.</p>
+    <p id ="catagory pull-right">Drinking Water</p>
+    <span class="pull-left"id="urgency">level 1</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Drinking water</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.</p>
+    <p id ="catagory pull-right">Drinking Water</p>
+    <span class="pull-left"id="urgency">level 1</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Electricity</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Electricity</p>
+    <span class="pull-left"id="urgency">level 3</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Electricity</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Electricity</p>
+    <span class="pull-left"id="urgency">level 3</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Health issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Health</p>
+    <span class="pull-left"id="urgency">level 2</span>
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+<div class="col-md-6 col-lg-4 movie-tile text-center title-dimention bgs" id="4KPTXpQehio" data-toggle="modal" data-target="#">
+    <span class="title-fonts">Health issues</span>
+    <p id ="description">The roads are not properly maintained. Even though the maintainence work is done, its not that fast. Sanitary status is also not so good as well.Sanitary status is also not so good as well. The roads are not properly maintained.</p>
+    <p id ="catagory pull-right">Health</p>
+    <span class="pull-left"id="urgency">level 2</span>
+   
+    <button  class="btn btn-default pull-right " id="vote">UPVOTE</button>
+</div>
+
+
+    </div>
+  </body>
+</html>
